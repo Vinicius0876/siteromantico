@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página de Amor</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2d2d2d;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #ff66b3;
+            text-shadow: 2px 2px 5px rgba(255, 102, 179, 0.8);
+            margin-top: 50px;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+        }
+
+        /* Animação de fade in */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .message-box {
+            font-size: 18px;
+            color: #ff99cc;
+            margin-top: 30px;
+            opacity: 0;
+            animation: fadeInText 3s forwards;
+        }
+
+        /* Animação de Fade In para as mensagens */
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .interactive-button {
+            background-color: #ff66b3;
+            color: white;
+            font-size: 20px;
+            border: none;
+            padding: 15px 30px;
+            margin-top: 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .interactive-button:hover {
+            background-color: #ff3385;
+        }
+
+        .footer {
+            font-size: 16px;
+            color: #ff66b3;
+            margin-top: 30px;
+        }
+
+        .card {
+            display: inline-block;
+            background-color: #ff66b3;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            background-color: #ff3385;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bem-vinda a minha página querida, aqui está eu sendo mais uma vez racional kkkkkk! 💖</h1>
+
+    <!-- Caixa para mostrar as mensagens -->
+    <div class="message-box" id="messageBox"></div>
+
+    <!-- Botões interativos -->
+    <div>
+        <div class="card" onclick="showMessage('frase1')">Mensagem 1 💌</div>
+        <div class="card" onclick="showMessage('frase2')">Mensagem 2 💕</div>
+        <div class="card" onclick="showMessage('frase3')">Mensagem Principal 💖</div>
+    </div>
+
+    <div class="footer">Isso aqui veio do cara que mais te admira e que ama estar ao seu lado cada segundo</div>
+
+    <script>
+        // Mensagens românticas
+        const messages = {
+            frase1: "Não existe melhor jeito de acordar de manhã e olhar uma mensagem de bom dia vinda de você. 🌞",
+            frase2: "Te ver e conversar com você é a melhor parte do meu dia, de longe. 💬",
+            frase3: "Eu sei que o que passou foi difícil, e que você carrega cicatrizes que talvez nem todos consigam ver. Mas quero que saiba que aqui, ao meu lado, nada será como antes. Eu estou aqui para ser a paz que você precisa, para te mostrar que o amor verdadeiro é leve, seguro e sem dores do passado. Você merece viver algo bonito e tranquilo, e quero estar ao seu lado para te ajudar a sentir essa calmaria. Vou estar aqui, com paciência e carinho, para te apoiar em cada passo. Porque você é muito mais do que tudo o que passou, e o futuro pode ser tão leve quanto o amor que sinto por você. 💖"
+        };
+
+        // Função para exibir a mensagem romântica na caixa de texto
+        function showMessage(frase) {
+            const messageBox = document.getElementById('messageBox');
+            messageBox.innerText = messages[frase];
+        }
+    </script>
+
+</body>
+</html>
